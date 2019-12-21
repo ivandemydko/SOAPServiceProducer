@@ -1,0 +1,34 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="getAddressRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAddressResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="address" type="tns:address"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="address">
+        <xs:sequence>
+            <xs:element type="xs:long" name="id"/>
+            <xs:element type="xs:string" name="city"/>
+            <xs:element type="xs:string" name="building"/>
+            <xs:element type="xs:string" name="street"/>
+            <xs:element type="xs:string" name="room"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
+
+
+
+
